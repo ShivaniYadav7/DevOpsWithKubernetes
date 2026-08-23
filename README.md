@@ -9,3 +9,4 @@ This repository contains my submissions for the [DevOps with Kubernetes](https:/
 | 1.1 | [log_output](./log_output) | [Release 1.1](https://github.com/ShivaniYadav7/DevOpsWithKubernetes/releases/tag/1.1) |
 | 1.2 | [the_project](./the_project) | [Release 1.2](https://github.com/ShivaniYadav7/DevOpsWithKubernetes/releases/tag/1.2) |
 | 1.3 | [log_output](./log_output) | [Release 1.3](https://github.com/ShivaniYadav7/DevOpsWithKubernetes/releases/tag/1.3) |
+| 1.4 | [the_project](./the_project) | [Release 1.4](https://github.com/ShivaniYadav7/DevOpsWithKubernetes/releases/tag/1.4) |
