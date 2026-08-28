@@ -1,17 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: log-output-deployment
+  name: the-project-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: log-output
+      app: the-project
   template:
     metadata:
       labels:
-        app: log-output
+        app: the-project
     spec:
       containers:
-        - name: log-output
-          image: dockergauge/the_project:v1
+      - name: the-project-container
+        image: dockergauge/the-project:v5
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        env:
+        - name: MESSAGE
+          value: "Hello from Kubernetes environment"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: the-project-svc # Note the service name here
+spec:
+  type: ClusterIP
+  selector:
+    app: the-project
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
